@@ -1,3 +1,4 @@
 export function createPageUrl(name) {
-  return `/${name}`;
+  if (!name) return "/";
+  return `/${String(name).toLowerCase()}`;
 }

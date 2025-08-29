@@ -1,0 +1,73 @@
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #1a472a;
+  --primary-contrast: #ffffff;
+  --surface: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+/* Layout */
+.app { min-height: 100%; display: flex; flex-direction: column; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.site-main { flex: 1 1 auto; }
+
+/* Header */
+.site-header { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: rgba(255,255,255,0.9); border-bottom: 1px solid var(--border); z-index: 10; }
+.header-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); }
+.brand-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--primary); color: var(--primary-contrast); display: grid; place-items: center; font-weight: 700; font-size: 14px; }
+.brand-name { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+.nav { display: flex; gap: 8px; align-items: center; }
+.nav-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; border: 1px solid transparent; transition: all .2s ease; }
+.nav-link:hover { color: var(--text); background: var(--surface); }
+.nav-link.active { color: var(--primary-contrast); background: var(--primary); box-shadow: 0 6px 16px rgba(26,71,42,0.25); }
+
+/* Sections */
+.section { padding: 72px 0; }
+.section.tight { padding: 48px 0; }
+.section.primary { background: var(--primary); color: var(--primary-contrast); }
+.section.surface { background: var(--surface); }
+
+/* Typography */
+h1, .h1 { font-size: 40px; line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+h2, .h2 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; }
+p { margin: 0 0 12px; }
+.muted { color: var(--muted); }
+
+/* Buttons */
+.actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--border); background: #fff; color: var(--text); font-weight: 600; cursor: pointer; transition: all .2s ease; text-decoration: none; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08); }
+.btn-primary { background: var(--primary); color: var(--primary-contrast); border-color: var(--primary); }
+.btn-primary:hover { box-shadow: 0 10px 22px rgba(26, 71, 42, 0.3); }
+.btn-ghost { background: transparent; }
+
+/* Grid & Cards */
+.grid { display: grid; gap: 16px; }
+@media (min-width: 768px) { .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } .grid.cols-2 { grid-template-columns: repeat(2, 1fr); } }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 20px; transition: box-shadow .2s ease, transform .2s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); }
+.card-media { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.badge.green { background: #dcfce7; color: #166534; }
+.badge.yellow { background: #fef9c3; color: #854d0e; }
+.badge.gray { background: #f1f5f9; color: #334155; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); margin-top: 72px; background: #fff; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 32px 0; }
+.brand-small .brand-mark { width: 24px; height: 24px; font-size: 12px; }
+.brand-small .brand-name { font-size: 16px; font-weight: 700; }
