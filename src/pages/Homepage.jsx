@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 export default function Homepage() {
   const features = [
-    { icon: Code, title: "Entwicklung", description: "Moderne Webanwendungen mit aktuellen Technologien" },
-    { icon: Palette, title: "Design", description: "Ästhetische und benutzerfreundliche Interfaces" },
-    { icon: Zap, title: "Performance", description: "Optimierte Lösungen für beste Geschwindigkeit" },
+    { icon: Code, title: "Development", description: "Modern web applications built with current technologies" },
+    { icon: Palette, title: "Design", description: "Aesthetic and user-friendly interfaces" },
+    { icon: Zap, title: "Performance", description: "Optimized solutions for great speed" },
   ];
 
   const stats = [
-    { number: "50+", label: "Projekte" },
-    { number: "100%", label: "Zufriedenheit" },
+    { number: "50+", label: "Projects" },
+    { number: "100%", label: "Satisfaction" },
     { number: "24/7", label: "Support" },
   ];
 
@@ -23,17 +23,17 @@ export default function Homepage() {
       <section className="section">
         <div className="container" style={{ textAlign: "center" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="h1">Digitale Lösungen neu gedacht</h1>
+            <h1 className="h1">Digital solutions, reimagined</h1>
             <p className="muted" style={{ fontSize: 18, maxWidth: 720, margin: "0 auto 24px" }}>
-              Wir erschaffen außergewöhnliche digitale Erlebnisse, die Ihre Vision zum Leben erwecken.
+              We craft exceptional digital experiences that bring your vision to life.
             </p>
             <div className="actions">
               <Link to={createPageUrl("projekte")} className="btn btn-primary">
-                <span>Projekte ansehen</span>
+                <span>View projects</span>
                 <ArrowRight size={18} />
               </Link>
               <Link to={createPageUrl("about")} className="btn btn-ghost">
-                Mehr erfahren
+                Learn more
               </Link>
             </div>
           </motion.div>
@@ -44,8 +44,8 @@ export default function Homepage() {
       <section className="section surface">
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: 24 }}>
-            <h2 className="h2">Unsere Expertise</h2>
-            <p className="muted">Mit Leidenschaft für Details und Fokus auf Qualität</p>
+            <h2 className="h2">Our Expertise</h2>
+            <p className="muted">Passion for detail, focused on quality</p>
           </div>
           <div className="grid cols-3">
             {features.map((f, i) => (
@@ -81,10 +81,10 @@ export default function Homepage() {
       <section className="section">
         <div className="container" style={{ textAlign: "center" }}>
           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h2 className="h2">Bereit für Ihr nächstes Projekt?</h2>
-            <p className="muted" style={{ marginBottom: 20 }}>Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen.</p>
+            <h2 className="h2">Ready for your next project?</h2>
+            <p className="muted" style={{ marginBottom: 20 }}>Let’s build something extraordinary together.</p>
             <Link to={createPageUrl("about")} className="btn btn-primary">
-              <span>Kontakt aufnehmen</span>
+              <span>Get in touch</span>
               <ArrowRight size={18} />
             </Link>
           </motion.div>

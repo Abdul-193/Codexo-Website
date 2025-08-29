@@ -8,8 +8,8 @@ export default function Projekte() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Plattform",
-      description: "Moderne Online‑Shopping‑Lösung mit Zahlungssystem und Bestandsverwaltung",
+      title: "E-commerce Platform",
+      description: "Modern online shopping solution with payments and inventory management",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&h=600&fit=crop",
       category: "web",
       technologies: ["React", "Node.js", "PostgreSQL"],
@@ -19,7 +19,7 @@ export default function Projekte() {
     {
       id: 2,
       title: "Portfolio Website",
-      description: "Elegantes, responsives Portfolio mit Galerie und Kontaktformular",
+      description: "Elegant, responsive portfolio with gallery and contact form",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop",
       category: "design",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
@@ -29,7 +29,7 @@ export default function Projekte() {
     {
       id: 3,
       title: "Task Management App",
-      description: "Kollaborative Projektmanagement‑App mit Echtzeit‑Updates",
+      description: "Collaborative project management app with real-time updates",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=900&h=600&fit=crop",
       category: "app",
       technologies: ["Vue.js", "Express", "Socket.io"],
@@ -39,17 +39,17 @@ export default function Projekte() {
     {
       id: 4,
       title: "Brand Identity",
-      description: "Komplette Markenidentität inkl. Logo, Farben und Guidelines",
+      description: "Complete brand identity including logo, colors and guidelines",
       image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=900&h=600&fit=crop",
       category: "design",
       technologies: ["Adobe CC", "Figma"],
       date: "2023",
-      status: "Abgeschlossen",
+      status: "Completed",
     },
   ];
 
   const categories = [
-    { key: "alle", label: "Alle" },
+    { key: "alle", label: "All" },
     { key: "web", label: "Web" },
     { key: "app", label: "App" },
     { key: "design", label: "Design" },
@@ -63,8 +63,8 @@ export default function Projekte() {
     <div className="section">
       <div className="container">
         <div style={{ textAlign: "center", marginBottom: 24 }}>
-          <h1 className="h1" style={{ marginBottom: 8 }}>Unsere Projekte</h1>
-          <p className="muted">Eine Auswahl erfolgreich umgesetzter Arbeiten</p>
+          <h1 className="h1" style={{ marginBottom: 8 }}>Our Projects</h1>
+          <p className="muted">A selection of successfully delivered work</p>
         </div>
 
         {/* Filter */}
@@ -103,7 +103,7 @@ export default function Projekte() {
                 <div style={{ display: "flex", gap: 8, alignItems: "center", justifyContent: "space-between" }}>
                   <span className={statusClass(project.status)}>{project.status}</span>
                   <div style={{ display: "flex", gap: 8 }}>
-                    <button className="btn btn-ghost"><ExternalLink size={16} /> Ansehen</button>
+                    <button className="btn btn-ghost"><ExternalLink size={16} /> View</button>
                     <button className="btn btn-ghost"><Github size={16} /> Code</button>
                   </div>
                 </div>

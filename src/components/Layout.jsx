@@ -5,8 +5,8 @@ import { Home, FolderOpen, User } from "lucide-react";
 
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
-  { title: "Projekte", url: createPageUrl("projekte"), icon: FolderOpen },
-  { title: "Über", url: createPageUrl("about"), icon: User },
+  { title: "Projects", url: createPageUrl("projekte"), icon: FolderOpen },
+  { title: "About", url: createPageUrl("about"), icon: User },
 ];
 
 export default function Layout({ children }) {
@@ -16,7 +16,7 @@ export default function Layout({ children }) {
     <div className="app">
       <header className="site-header">
         <div className="container header-inner">
-          <Link to={createPageUrl("home")} className="brand" aria-label="codexo startseite">
+          <Link to={createPageUrl("home")} className="brand" aria-label="codexo homepage">
             <div className="brand-mark">C</div>
             <span className="brand-name">codexo</span>
           </Link>
@@ -45,9 +45,10 @@ export default function Layout({ children }) {
             <div className="brand-mark">C</div>
             <span className="brand-name">codexo</span>
           </div>
-          <p className="muted">© 2024 codexo. Alle Rechte vorbehalten.</p>
+          <p className="muted">© 2024 codexo. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
 }
+
